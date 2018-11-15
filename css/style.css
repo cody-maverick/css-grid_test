@@ -1,0 +1,67 @@
+@import url(normalize.css);
+@font-face {
+  font-family: 'Lato Bold';
+  src: url("fonts/latobold.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Lato Italic';
+  src: url("fonts/latoitalic.woff") format("woff");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Lato Medium';
+  src: url("fonts/latomedium.woff") format("woff");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Lato Regular';
+  src: url("fonts/latoregular.woff") format("woff");
+  font-style: normal;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  margin: 0 auto;
+  width: 1600px;
+  font-family: Lato;
+}
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: url(../img/main-banner.png) no-repeat;
+  height: 800px;
+}
+
+.nav-list {
+  font-family: 'Lato Bold';
+  text-transform: uppercase;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+/*# sourceMappingURL=style.css.map */
