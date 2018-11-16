@@ -8,13 +8,13 @@
 
 @font-face {
   font-family: 'Lato Italic';
-  src:  url('fonts/latoitalic.woff') format('woff');
+  src: url('fonts/latoitalic.woff') format('woff');
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Lato Medium';
-  src:  url('fonts/latomedium.woff') format('woff');
+  src: url('fonts/latomedium.woff') format('woff');
   font-style: normal;
 }
 
@@ -36,7 +36,7 @@ ul {
 
 body {
   margin: 0 auto;
-  width: 1600px;
+  max-width: 1600px;
   font-family: Lato;
 }
 
@@ -53,4 +53,43 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-top: 28px;
+}
+
+.nav-list__link {
+  color: #4d4959;
+  font-size: 13px;
+  letter-spacing: 2.5px;
+}
+
+.nav-list__item:not(:last-child) {
+  padding-right: 63px;
+}
+
+.nav-list__item {
+  position: relative;
+}
+
+%after {
+  position: absolute;
+  display: block;
+  content: "";
+}
+
+.nav-list__item:nth-child(2)::after,
+.nav-list__item:nth-child(5)::after {
+  @extend %after;
+  top: 13px;
+  left: -34px;
+  background: #585464;
+  width: 2px;
+  height: 2px;
+}
+
+.main-title {
+  color: #353738;
+  font: 18px 'Lato Bold';
+  text-align: center;
+  position: relative;
+  text-transform: uppercase;
 }
