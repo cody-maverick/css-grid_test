@@ -24,6 +24,20 @@
   font-style: normal;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  margin: 0;
+}
+
 a {
   text-decoration: none;
 }
@@ -37,6 +51,7 @@ ul {
 body {
   margin: 0 auto;
   max-width: 1600px;
+  min-width: 700px;
   font-family: Lato;
 }
 
@@ -86,10 +101,107 @@ body {
   height: 2px;
 }
 
-.main-title {
+.title {
   color: #353738;
   font: 18px 'Lato Bold';
+  letter-spacing: 3.5px;
   text-align: center;
   position: relative;
   text-transform: uppercase;
+}
+
+.title_chain:after {
+  @extend %after;
+  background: url(../img/chain-icon.png);
+  top: -73px;
+  transform: translateX(-50%);
+  left: 50%;
+  width: 52px;
+  height: 44px;
+}
+
+.paragraph {
+  text-align: center;
+  font: 17px/34px 'Lato Regular';
+  color: #848789;
+  letter-spacing: 0.3px;
+}
+
+.section-one div {
+  padding: 190px 0px 134px 0px;
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+.section-one {
+  background: #f7f7f7;
+}
+
+.title_padding {
+  padding: 0px 30px;
+  padding-bottom: 21px;
+}
+
+.paragraph_padding {
+  padding: 0px 30px;
+}
+
+.section-two {
+  display: grid;
+  grid: repeat(3, 600px) / repeat(3, 33.3%);
+}
+
+.bicycle {
+  grid-column: 1 / 3;
+  background: url(../img/bicycle.jpg) 50% 50% no-repeat;
+}
+
+.seat {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.title-seat {
+  padding: 127px 0px 12px 0px;
+}
+
+.seat__text {
+  font: 16px/30px 'Lato Regular';
+  color: #848789;
+  padding: 0px 60px 0px 69px;
+  text-align: justify;
+  position: relative;
+}
+
+.seat__text::after {
+  @extend %after;
+  width: 50px;
+  height: 1px;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -35px;
+  background: #d7d7d7;
+}
+
+.title-seat_after:after,
+.title-seat_after_boriosa:after {
+  @extend %after;
+  top: 70px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 44px;
+  height: 30px;
+  background: url(../img/oliva.png) no-repeat;
+}
+
+.title-seat_after_boriosa:after {
+  background: url(../img/boriosa.png) no-repeat;
+  width: 33px;
+  height: 33px;
+}
+
+.vintage {
+  grid-column: 2 / 4;
+  background: url(../img/vintage.jpg) 50% 50% no-repeat;
 }
