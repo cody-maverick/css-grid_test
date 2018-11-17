@@ -59,7 +59,6 @@ body {
   display: flex;
   justify-content: center;
   background: url(../img/main-banner.png) 50% 0 no-repeat;
-
   height: 800px;
 }
 
@@ -185,8 +184,9 @@ body {
   background: #d7d7d7;
 }
 
-.title-seat_after:after,
-.title-seat_after_boriosa:after {
+.title-seat_after::after,
+.title-seat_after_boriosa::after,
+.title-seat_after_mavic::after {
   @extend %after;
   top: 70px;
   left: 50%;
@@ -196,13 +196,50 @@ body {
   background: url(../img/oliva.png) no-repeat;
 }
 
-.title-seat_after_boriosa:after {
+.title-seat_after_boriosa::after {
   background: url(../img/boriosa.png) no-repeat;
-  width: 33px;
+  width: 34px;
   height: 33px;
+}
+
+.title-seat_after_mavic::after {
+  background: url(../img/fork.png) no-repeat;
+  width: 24px;
+  height: 44px;
 }
 
 .vintage {
   grid-column: 2 / 4;
   background: url(../img/vintage.jpg) 50% 50% no-repeat;
+}
+
+.bicycles {
+  background: url(../img/bicycles.jpg) 50% 50% no-repeat;
+}
+
+.bicycle-2 {
+  background: url(../img/bicycle-2.jpg) 50% 50% no-repeat;
+}
+
+@media screen and (max-width: 1600px) {
+  .section-two {
+    grid: repeat(2, 600px auto) / 50% 50%;
+  }
+  .vintage {
+    grid-column: 1 / 3;
+    background-size: cover;
+  }
+  .bicycle,
+  .bicycles {
+    background-size: cover;
+  }
+  .seat__text {
+    margin-bottom: 68px;
+  }
+}
+
+.seat img {
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
 }
