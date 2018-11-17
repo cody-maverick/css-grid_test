@@ -13,6 +13,12 @@
 }
 
 @font-face {
+  font-family: 'Lato Thin';
+  src: url('fonts/latothin.woff') format('woff');
+  font-style: normal;
+}
+
+@font-face {
   font-family: 'Lato Medium';
   src: url('fonts/latomedium.woff') format('woff');
   font-style: normal;
@@ -21,6 +27,12 @@
 @font-face {
   font-family: 'Lato Regular';
   src: url('fonts/latoregular.woff') format('woff');
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Lato Light';
+  src: url('fonts/latolight.woff') format('woff');
   font-style: normal;
 }
 
@@ -40,6 +52,17 @@ p {
 
 a {
   text-decoration: none;
+  outline: none
+}
+
+input {
+  outline: none;
+}
+
+button {
+  outline: none;
+  background: none;
+  border: none;
 }
 
 ul {
@@ -51,8 +74,8 @@ ul {
 body {
   margin: 0 auto;
   max-width: 1600px;
-  min-width: 700px;
-  font-family: Lato;
+  min-width: 480px;
+  font-family: 'Lato Regular';
 }
 
 .header {
@@ -127,7 +150,7 @@ body {
   letter-spacing: 0.3px;
 }
 
-.section-one div {
+.section-one-wrap {
   padding: 190px 0px 134px 0px;
   max-width: 1080px;
   margin: 0 auto;
@@ -148,7 +171,7 @@ body {
 
 .section-two {
   display: grid;
-  grid: repeat(3, 600px) / repeat(3, 33.3%);
+  grid: repeat(3, 600px) / repeat(3, 1fr);
 }
 
 .bicycle {
@@ -221,6 +244,246 @@ body {
   background: url(../img/bicycle-2.jpg) 50% 50% no-repeat;
 }
 
+.seat img {
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+
+.title_twitter:after {
+  @extend %after;
+  top: -60px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  width: 34px;
+  height: 30px;
+  background: url(../img/twitter-icon.png) no-repeat;
+}
+
+.title_transform_none {
+  text-transform: none;
+  letter-spacing: 2.2px;
+}
+
+.grey {
+  color: #848789;
+  font-family: "Lato Light";
+}
+
+.section-one_padding div {
+  padding: 184px 0px 179px 0px;
+}
+
+.paragraph_italic {
+  font-family: 'Lato Italic';
+  font-size: 23px;
+  margin-top: -5px;
+}
+
+.images-section {
+  display: grid;
+  grid: repeat(2, 267px) / repeat(6, 1fr);
+  grid-template-areas: 'm n h c e e' 'p p h c d f';
+}
+
+.grid-1 {
+  background: url(../img/grid-1.jpg) 50% 50% no-repeat;
+  grid-area: m;
+  background-size: cover;
+}
+
+.grid-2 {
+  background: url(../img/grid-2.jpg) 50% 50% no-repeat;
+  grid-area: n;
+  background-size: cover;
+}
+
+.grid-3 {
+  grid-area: h;
+  background: url(../img/grid-3.jpg) 50% 50% no-repeat;
+  background-size: cover;
+}
+
+.grid-4 {
+  grid-area: c;
+  background: url(../img/grid-4.jpg) 50% 50% no-repeat;
+  background-size: cover;
+}
+
+.grid-5 {
+  grid-area: p;
+  background: url(../img/grid-5.jpg) 50% 50% no-repeat;
+  background-size: cover;
+}
+
+.grid-6 {
+  grid-area: e;
+  background: url(../img/grid-6.jpg) 50% 50% no-repeat;
+  background-size: cover;
+}
+
+.grid-7 {
+  grid-area: d;
+  background: url(../img/grid-7.jpg) 50% 50% no-repeat;
+  background-size: cover;
+}
+
+.grid-8 {
+  grid-area: f;
+  background: url(../img/grid-8.jpg) 50% 50% no-repeat;
+  background-size: cover;
+}
+
+.button-section {
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #282f35;
+}
+
+.discover-btn {
+  font: 15px 'Lato Regular';
+  color: #fff;
+  text-transform: uppercase;
+  border: 1px solid #94979a;
+  letter-spacing: 2.5px;
+  padding: 15px 57px;
+  transition: 0.2s;
+  &:hover {
+    color: rgb(196, 196, 196);
+  }
+  &:active {
+    transform: scale(0.92, 0.92)
+  }
+}
+
+.subscribe-section {
+  text-align: center;
+  padding: 230px 0px 111px;
+}
+
+.subscribe {
+  width: 534px;
+  margin: 0 auto;
+}
+
+.subscribe__title {
+  color: #848789;
+  font-size: 21px;
+  letter-spacing: 1px;
+  font-family: 'Lato Italic';
+  margin-bottom: 35px;
+  position: relative;
+}
+
+.subscribe__title:after {
+  @extend %after;
+  height: 88px;
+  width: 94px;
+  top: -121px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  background: url(../img/logo.png) no-repeat;
+}
+
+.subscribe__form {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+
+.subscribe_input {
+  font-size: 18px;
+  font-family: 'Lato Italic';
+  border: 1px solid #d3d7d9;
+  padding: 24px 0px 23px 27px;
+  letter-spacing: 0.6px;
+  width: 400px;
+  box-sizing: border-box;
+}
+
+.subscribe__btn {
+  background: #64c29e;
+  font-family: 'Lato Thin';
+  font-size: 24px;
+  width: 126px;
+  text-align: center;
+  color: #fff;
+  text-transform: uppercase;
+  transition: 0.2s;
+  &:hover {
+    background: #38be8b;
+    cursor: pointer;
+  }
+  &:active {
+    transform: scale(0.95, 0.95);
+  }
+}
+
+.footer {
+  background: #f7f7f7;
+}
+
+.footer__wrap {
+  position: relative;
+  max-width: 70%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  padding: 107px 0px 109px;
+}
+
+.footer__info {
+  font-size: 14px;
+  font-family: 'Lato Italic';
+  color: #848789;
+  position: absolute;
+  left: 10px;
+  top: 95px;
+  line-height: 18px;
+}
+
+.footer__link {
+  color: #848789;
+}
+
+.main-info {
+  font-size: 16px;
+  font-family: 'Lato Bold';
+}
+
+.twitter {
+  width: 35px;
+  height: 34px;
+  display: block;
+  background: url(../img/ft-tw-icon.png) no-repeat;
+}
+
+.footer__social {
+  display: flex;
+}
+
+.social-link:not(:last-child) {
+  margin-right: 5px;
+}
+
+.facebook {
+  width: 35px;
+  height: 34px;
+  display: block;
+  background: url(../img/ft-fb-icon.png) no-repeat;
+}
+
+.pinterest {
+  width: 35px;
+  height: 34px;
+  display: block;
+  background: url(../img/ft-pt-icon.png) no-repeat;
+}
+
 @media screen and (max-width: 1600px) {
   .section-two {
     grid: repeat(2, 600px auto) / 50% 50%;
@@ -238,8 +501,30 @@ body {
   }
 }
 
-.seat img {
-  width: 100%;
-  height: auto;
-  margin: 0 auto;
+@media screen and (max-width: 1300px) {
+  .images-section {
+    grid: repeat(4, 267px)/repeat(3, 1fr);
+    grid-template-areas: 'm n h' 'p p h' 'c e e' 'c d f';
+  }
+  .footer__info {
+    position: relative;
+    top: -11px;
+  }
+  .footer__wrap {
+    justify-content: space-between;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .images-section {
+    grid: repeat(6, 267px)/repeat(2, 1fr);
+    grid-template-areas: 'm n' 'p p' 'h c' 'h c' 'e e' 'd f';
+  }
+  .section-two {
+    grid: 400px auto auto repeat(2, 400px) auto / 100%;
+  }
+  .vintage,
+  .bicycle {
+    grid-column: 1/ 2;
+  }
 }
