@@ -79,19 +79,18 @@ body {
 }
 
 .header {
-  display: flex;
-  justify-content: center;
   background: url(../img/main-banner.png) 50% 0 no-repeat;
   height: 800px;
+  justify-content: center;
+  display: flex;
 }
 
 .nav-list {
   font-family: 'Lato Bold';
   text-transform: uppercase;
-  display: flex;
-  justify-content: space-between;
   align-items: center;
   padding-top: 28px;
+  display: flex;
 }
 
 .nav-list__link {
@@ -365,7 +364,7 @@ body {
 }
 
 .subscribe {
-  width: 534px;
+  max-width: 534px;
   margin: 0 auto;
 }
 
@@ -401,7 +400,7 @@ body {
   border: 1px solid #d3d7d9;
   padding: 24px 0px 23px 27px;
   letter-spacing: 0.6px;
-  width: 400px;
+  width: 80%;
   box-sizing: border-box;
 }
 
@@ -409,7 +408,7 @@ body {
   background: #64c29e;
   font-family: 'Lato Thin';
   font-size: 24px;
-  width: 126px;
+  width: 18%;
   text-align: center;
   color: #fff;
   text-transform: uppercase;
@@ -526,5 +525,11 @@ body {
   .vintage,
   .bicycle {
     grid-column: 1/ 2;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .nav-list {
+    flex-direction: column;
   }
 }
