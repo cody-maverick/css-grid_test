@@ -79,7 +79,8 @@ body {
 
 .header {
   background: url(../img/main-banner.png) 50% 0 no-repeat;
-  height: 800px;
+  background-size: cover;
+  height: 100vh;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
