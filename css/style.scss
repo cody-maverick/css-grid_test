@@ -83,6 +83,7 @@ body {
   height: 100vh;
   justify-content: center;
   display: flex;
+  position: relative;
 }
 
 .nav-list {
@@ -540,6 +541,59 @@ body {
     background: #585464;
     width: 2px;
     height: 2px;
+  }
+}
+
+.menu-toggler,
+.nav-close {
+  display: block;
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  top: 0;
+  left: 0;
+  background: #8e8e8e url(../img/burger.svg) no-repeat;
+  background-size: 61%;
+  background-position: 50% 50%;
+  display: none;
+  z-index: 5;
+}
+
+.nav-close {
+  position: absolute;
+  display: none;
+  background: #8e8e8e url(../img/delete.svg) 50% 50% no-repeat;
+  background-size: 40%;
+}
+
+@media screen and (max-width: 600px) {
+  .menu-toggler {
+    display: block;
+  }
+  .nav {
+    position: fixed;
+    background: #eee;
+    width: 100%;
+    height: 100vh;
+    display: none;
+    z-index: 6;
+  }
+  .nav.active {
+    display: block;
+  }
+  .nav.active .nav-close {
+    display: block;
+  }
+  .nav-list {
+    flex-direction: column;
+  }
+  .nav-list__item:not(:last-child) {
+    padding-right: 0;
+    margin-bottom: 25px;
+  }
+  .nav-list__item:nth-child(2)::after,
+  .nav-list__item:nth-child(5)::after {
+    display: none;
   }
 }
 
